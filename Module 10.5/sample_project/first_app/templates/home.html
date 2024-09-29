@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page</h1>
+
+
+    <h3>{{ num | add:"2" }}</h3>
+    <h3>{{ str | addslashes }}</h3>
+    <h3>{{ name | capfirst }}</h3>
+    <h3>"{{ name | center:"15" }}"</h3>
+    <h3>{{ str | cut:" " }}</h3>
+    <h3>{{ timeNow | date:"D d M Y" }}</h3>
+    <h3>{{ val | default:"nothing" }}</h3>
+    <h3>{{ lst | dictsort:"age" }}</h3>
+    <h3>{{ num | divisibleby:"3" }}</h3>
+
+    {% autoescape off %}
+    <h3>{{ title|escape }}</h3>
+    <h3>{{ title }}</h3>
+    {% endautoescape %}
+
+    <h3>{{ title | escape }}</h3>
+
+    <h3>{{ num | filesizeformat }}</h3>
+    <h3>{{ lstNum | first }}</h3>
+    <h3>{{ lstStr | join:" // " }}</h3>
+    <h3>{{ lstNum | last }}</h3>
+    <h3>{{ name | length }}</h3>
+    <h3>{{ intro | linenumbers }}</h3>
+    <h3>{{ str | lower }}</h3>
+    <h3>{{ name | make_list }}</h3>
+    <h3>{{ lstNum | random }}</h3>
+    <h3>{{ lstNum | slice:":2" }}</h3>
+    <h3>{{ lstStr | slugify }}</h3>
+    <h3>{{ timeNow | time:"H:i" }}</h3>
+
+    <h1>{{ birthdate|timesince:timeNow }}</h1>
+ 
+    <h3>{{ str | title }}</h3>
+ 
+    <h3>{{ var | unordered_list }}</h3>
+
+    <h3>{{ str | upper }}</h3>
+    <h3>{{ str | wordcount }}</h3>
+
+
+    <h3> {{ lstStr | join:" - "}} </h3>
+    <h3> {{ intro | truncatechars:8 }} </h3>
+    <h3> {{ intro | truncatewords:3 }} </h3>
+    <h3> {{ btn | striptags }} </h3>
+
+    <h3> You have {{ num_message }} message {{ num_message | pluralize }} </h3>
+
+
+</body>
+</html>

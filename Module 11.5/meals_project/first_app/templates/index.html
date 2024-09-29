@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="container-fluid d-flex justify-content-center row">
+
+    {%for card in cards%}
+    <div class="card col-lg-4 col-md-6 col-sm-12 m-3 shadow-lg rounded-4" style="width: 18rem;">
+        <img src="{{card.strMealThumb}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title my-3"> {{card.strMeal}} </h5>
+        <p class="card-text"> {{description}} </p>
+        </div>
+    </div>
+    {%endfor%}
+
+</div>
+
+
+
+{% endblock %}
